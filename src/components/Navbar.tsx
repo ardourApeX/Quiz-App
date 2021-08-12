@@ -1,13 +1,10 @@
 import "./Navbar.css";
 import {
 	AddIcon,
-	EditIcon,
 	ExternalLinkIcon,
 	HamburgerIcon,
 	LockIcon,
 	MoonIcon,
-	RepeatIcon,
-	SearchIcon,
 	SunIcon,
 } from "@chakra-ui/icons";
 import {
@@ -22,6 +19,7 @@ import {
 	Menu,
 	MenuButton,
 	Avatar,
+	Tooltip,
 } from "@chakra-ui/react";
 import { useLocation, Link } from "react-router-dom";
 import { bgColor, textColor } from "../utils/constants";
@@ -43,15 +41,26 @@ export function Navbar() {
 				fontSize={["md", "lg", "lg", "md"]}
 				h={["3em", "3em", "3em", "4em"]}
 				boxShadow="md"
-		
 			>
 				<Flex mx={3} w="100%" justify="space-between" align="center">
 					<Box>
-						<Image
-							h={["2em", "2.1em", "2.1em", "2.5em"]}
-							src={icon}
-							alt="Logo of Chakra-ui"
-						/>
+						<Tooltip
+							label="Socify"
+							fontSize="md"
+							placement="auto"
+							bg="transparent"
+							boxShadow="none"
+							color={colorMode === "light" ? bgColor["dark"] : bgColor["light"]}
+						>
+							<Link to={{ pathname: "/" }}>
+								{" "}
+								<Image
+									h={["2em", "2.1em", "2.1em", "2.5em"]}
+									src={icon}
+									alt="Logo of Chakra-ui"
+								/>
+							</Link>
+						</Tooltip>
 					</Box>
 					<Stack
 						spacing={[3, 5, 8, 8]}

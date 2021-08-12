@@ -3,16 +3,10 @@ import {
 	Flex,
 	Stack,
 	useColorMode,
-	IconButton,
 	Box,
 	Image,
-	MenuItem,
-	MenuList,
-	Menu,
-	MenuButton,
 	Grid,
 	Heading,
-	Avatar,
 	Button,
 } from "@chakra-ui/react";
 import bg from "../../images/bg.png";
@@ -26,25 +20,24 @@ export function Home() {
 					templateColumns={[
 						"repeat(1,1fr)",
 						"repeat(1,1fr)",
-						"repeat(2,0.5fr)",
+						"repeat(2,fr)",
 						"repeat(2, 1fr)",
 					]}
 					gap={6}
 				>
-					<Box p={3} style={{ border: "1px solid red" }}>
-						<Image src={bg} />
+					<Box p={3}>
+						<Image w={["100%", "100%", "74%", "100%"]} mx="auto" src={bg} />
 					</Box>
-					<Stack
-						align="center"
-						justify="center"
-						style={{ border: "1px solid red" }}
-						spacing="2em"
-						p={3}
-					>
-						<Heading className="banner-heading" as="h1" size="3xl">
-							An Online Community of Musketeeeeers.
+					<Stack align="center" justify="center" spacing="2em" p={3}>
+						<Heading
+							style={{ fontFamily: "Quicksand, sans-serif" }}
+							className="banner-heading"
+							as="h1"
+							fontSize="3vw"
+						>
+							An Online Community for Musketeeeeers.
 						</Heading>
-						<p>
+						<p className="quote">
 							<strong>Sociify</strong> is an online platform which helps its
 							users to get closer and remain updated on their likeable topics
 							thorugh quizzes.

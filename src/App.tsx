@@ -9,7 +9,7 @@ function App() {
 		<div className="App">
 			<Navbar />
 			<Routes>
-				<Route path="/join">
+				<Route path="/">
 					<Home />
 				</Route>
 			</Routes>
