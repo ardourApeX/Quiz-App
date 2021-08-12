@@ -32,7 +32,6 @@ export function Navbar() {
 	return (
 		<div
 			style={{
-				minHeight: "100vh",
 				width: "100vw",
 			}}
 		>
@@ -44,6 +43,7 @@ export function Navbar() {
 				fontSize={["md", "lg", "lg", "md"]}
 				h={["3em", "3em", "3em", "4em"]}
 				boxShadow="md"
+		
 			>
 				<Flex mx={3} w="100%" justify="space-between" align="center">
 					<Box>
@@ -71,25 +71,25 @@ export function Navbar() {
 							display={["none", "inherit", "inherit", "inherit"]}
 							className="nav-route"
 							position="relative"
-							opacity={pathname !== "/card" ? 0.4 : 1}
+							opacity={pathname !== "/create" ? 0.4 : 1}
 						>
-							<Link to={{ pathname: "/card" }}>Create</Link>
+							<Link to={{ pathname: "/create" }}>Create</Link>
 						</Box>
 						<Box
 							display={["none", "inherit", "inherit", "inherit"]}
 							className="nav-route"
 							position="relative"
-							opacity={pathname !== "/list" ? 0.4 : 1}
+							opacity={pathname !== "/join" ? 0.4 : 1}
 						>
-							<Link to={{ pathname: "/list" }}>Join</Link>
+							<Link to={{ pathname: "/join" }}>Join</Link>
 						</Box>
 						<Box
 							display={["none", "inherit", "inherit", "inherit"]}
 							className="nav-route"
 							position="relative"
-							opacity={pathname !== "/form" ? 0.4 : 1}
+							opacity={pathname !== "/profile" ? 0.4 : 1}
 						>
-							<Link to={{ pathname: "/form" }}>Profile</Link>
+							<Link to={{ pathname: "/profile" }}>Profile</Link>
 						</Box>
 						<Box>
 							<IconButton
@@ -100,6 +100,7 @@ export function Navbar() {
 								fontSize={["15px", "13px", "14px", "10px"]}
 								h={["2.6em", "2.7em", "2.8em", "3.7em"]}
 								px="0px"
+								mr={["0px", "20px"]}
 								w={["2em", "3em", "3em", "4em"]}
 								icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
 							>
@@ -110,6 +111,7 @@ export function Navbar() {
 							<Menu>
 								<MenuButton
 									as={IconButton}
+									mr="10px"
 									aria-label="Options"
 									icon={<HamburgerIcon />}
 									variant="outline"
