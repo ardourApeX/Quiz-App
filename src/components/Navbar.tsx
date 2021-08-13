@@ -116,7 +116,7 @@ export function Navbar() {
 								Change Color Mode
 							</IconButton>
 						</Box>
-						<Box display={["inherit", "none", "none", "none"]}>
+						<Box zIndex="10" display={["inherit", "none", "none", "none"]}>
 							<Menu>
 								<MenuButton
 									as={IconButton}

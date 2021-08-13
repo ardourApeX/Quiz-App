@@ -21,4 +21,16 @@
 	--italic-heading: "Raleway", sans-serif;
 	--price-font: "Rubik", sans-serif;
 	--calm-font: "Quicksand", sans-serif;
+	--lowest-z-index: -2;
+	--lower-z-index: -1;
+	--z-index: 0;
+	--higher-z-index: 1;
+	--highest-z-index: 2;
+}
+::after,
+::before,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
