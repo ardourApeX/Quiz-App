@@ -18,6 +18,7 @@
     "@types/node": "^12.20.19",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",
+    "bootstrap": "^5.1.0",
     "emotion-theming": "^11.0.0",
     "framer-motion": "^4.1.17",
     "history": "^5.0.0",

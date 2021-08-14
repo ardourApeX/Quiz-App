@@ -30,6 +30,7 @@ export function Join() {
 					<Carousel controls={false}>
 						<Carousel.Item>
 							<Image
+								h={["160px", "210px", "auto", "auto"]}
 								className="d-block w-100"
 								src={carousel1}
 								alt="First slide"
@@ -37,6 +38,8 @@ export function Join() {
 						</Carousel.Item>
 						<Carousel.Item>
 							<Image
+								h={["160px", "210px", "auto", "auto"]}
+								w="auto"
 								className="d-block w-100"
 								src={carousel2}
 								alt="Second slide"
@@ -44,6 +47,7 @@ export function Join() {
 						</Carousel.Item>
 						<Carousel.Item>
 							<Image
+								h={["160px", "210px", "auto", "auto"]}
 								className="d-block w-100"
 								src={carousel3}
 								alt="Third slide"
@@ -57,7 +61,7 @@ export function Join() {
 					></div>
 					<Heading
 						color={fontColor[colorMode]}
-						fontSize={["4vw"]}
+						fontSize={["7vw", "5.6vw", "4vw", "auto"]}
 						fontWeight="light"
 						style={{ fontFamily: "Courgette, cursive" }}
 						className="carousel-heading"
@@ -66,10 +70,12 @@ export function Join() {
 					</Heading>
 					<div className="carousel-button">
 						<Button
-							w="auto"
+							w={["80px", "120px"]}
+							h={["30px", "37px"]}
 							variant="solid"
 							colorScheme={fontColor[colorMode]}
 							m={"auto"}
+							mb={["10px", "auto"]}
 						>
 							<Text fontSize="xs" as="em">
 								Create Quiz
