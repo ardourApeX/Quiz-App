@@ -1,59 +1,34 @@
 import "./Join.css";
 import {
-	Flex,
 	Stack,
 	useColorMode,
-	IconButton,
 	Box,
 	Button,
-	Image,
-	MenuItem,
+	Divider,
 	Text,
-	MenuList,
-	Menu,
-	MenuButton,
-	Avatar,
-	Tooltip,
 	Heading,
 } from "@chakra-ui/react";
+import { data } from "../../utils/mockData";
 import carousel1 from "../../images/carousel1.jpg";
 import carousel2 from "../../images/carousel2.jpg";
 import carousel3 from "../../images/carousel3.jpg";
 import { bgColor, textColor, fontColor } from "../../utils/constants";
-import { Carousel } from "react-bootstrap";
+import { Carousel } from "../../components/Carousel/Carousel";
+import { CarouselSlider } from "../../components/Carousel Slider/CarouselSlider";
 export function Join() {
-	const { colorMode, toggleColorMode } = useColorMode();
+	const { colorMode } = useColorMode();
 	return (
 		<div className="join-page">
 			<Stack>
-				<Box className="carousel">
-					<Carousel controls={false}>
-						<Carousel.Item>
-							<Image
-								h={["160px", "210px", "auto", "auto"]}
-								className="d-block w-100"
-								src={carousel1}
-								alt="First slide"
-							/>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Image
-								h={["160px", "210px", "auto", "auto"]}
-								w="auto"
-								className="d-block w-100"
-								src={carousel2}
-								alt="Second slide"
-							/>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Image
-								h={["160px", "210px", "auto", "auto"]}
-								className="d-block w-100"
-								src={carousel3}
-								alt="Third slide"
-							/>
-						</Carousel.Item>
-					</Carousel>
+				<Box mb="1rem" className="carousel">
+					<Carousel
+						carouselSettings={{ controls: false, indicators: false }}
+						imageSettings={{
+							h: ["160px", "210px", "auto", "auto"],
+							w: "auto",
+						}}
+						images={[carousel1, carousel2, carousel3]}
+					/>
 					<div
 						className={`carousel-overlay ${
 							colorMode === "light" ? "light-overlay" : "dark-overlay"
@@ -83,8 +58,25 @@ export function Join() {
 						</Button>
 					</div>
 				</Box>
-				<Box className="testing"></Box>
-				<Box className="testing"></Box>
+				<Divider />
+				<Box className="testing">
+					<CarouselSlider
+						sliderSetting={{
+							pagination: false,
+							itemsToShow: 3,
+							ease: "ease-in-out",
+							itemsToScroll: 1,
+							isRTL: false,
+							outerSpacing: 0,
+						}}
+						sliderHeadingSetting={{
+							mt: "1rem",
+							mb: "2rem",
+						}}
+						quizData={data}
+					/>
+				</Box>
+				<div style={{ marginTop: "10rem", border: "1px solid red" }}></div>
 			</Stack>
 		</div>
 	);

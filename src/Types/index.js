@@ -1,0 +1,6 @@
+export { CAROUSELSETTING, IMAGESETTING } from "./Carousel.type";
+export {
+	CAROUSELSLIDERSETTING,
+	CAROUSELSLIDERHEADINGSETTING,
+	QUIZDATA,
+} from "./CarouselSlider.type";
