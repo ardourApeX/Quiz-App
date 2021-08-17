@@ -42,20 +42,17 @@ export function CarouselSlider({
 	return (
 		<div>
 			<Heading {...sliderHeadingSetting}>Join public quizzes...</Heading>
-			<Carousel
-				className={
-					colorMode === "dark"
-						? "dark-mode carousel-parent"
-						: "light-mode carousel-parent"
-				}
-				{...sliderSetting}
-			>
+			<Carousel className=" carousel-parent" {...sliderSetting}>
 				{quizData.map((quiz) => (
 					<Stack
 						justifyContent="space-between"
 						h={["550px"]}
 						w={["25rem"]}
-						className="quiz-card"
+						className={
+							colorMode === "dark"
+								? "dark-mode quiz-card"
+								: "light-mode quiz-card"
+						}
 					>
 						<div className="image-container">
 							{" "}
@@ -68,7 +65,7 @@ export function CarouselSlider({
 							></Image>
 						</div>
 						<Flex justifyContent="space-between" alignItems="center">
-							<Heading>{quiz.name}</Heading>
+							<Heading size="lg">{quiz.name}</Heading>
 							<Image h="30px" src={difficultyCheck(quiz.difficulty)}></Image>
 						</Flex>
 

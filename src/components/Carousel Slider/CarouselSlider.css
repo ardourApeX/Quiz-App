@@ -15,6 +15,12 @@
 	box-shadow: rgb(50 50 93 / 25%) 14px 13px 20px 0px,
 		rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 }
+.light-mode:hover {
+	background-color: var(--offwhite);
+}
+.dark-mode:hover {
+	background-color: var(--light-gray);
+}
 .image-container {
 	height: 250px;
 	display: flex;
