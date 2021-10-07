@@ -17,6 +17,7 @@ import { Carousel } from "../../components/Carousel/Carousel";
 import { CarouselSlider } from "../../components/Carousel Slider/CarouselSlider";
 export function Join() {
 	const { colorMode } = useColorMode();
+
 	return (
 		<div className="join-page">
 			<Stack>
@@ -41,7 +42,7 @@ export function Join() {
 						style={{ fontFamily: "Courgette, cursive" }}
 						className="carousel-heading"
 					>
-						Willing to create a quiz?
+						Want to create a quiz?
 					</Heading>
 					<div className="carousel-button">
 						<Button
@@ -64,7 +65,6 @@ export function Join() {
 						sliderSetting={{
 							pagination: false,
 							itemsToShow: 3,
-							ease: "ease-in-out",
 							itemsToScroll: 1,
 							isRTL: false,
 							outerSpacing: 0,
