@@ -1,4 +1,7 @@
-import "./Home.css";
+//Dependencies
+import LazyLoad from "react-lazyload";
+
+// Chakra Components
 import {
 	Text,
 	Stack,
@@ -9,9 +12,14 @@ import {
 	Heading,
 	Button,
 } from "@chakra-ui/react";
-import bg from "../../images/bg.png";
-import { bgColor, textColor } from "../../utils/constants";
-export function Home() {
+
+//Custom Stylesheet
+import styles from "./Home.module.css";
+
+//Assests
+import homeAvatar from "../../images/bg.png";
+
+export function Home(): JSX.Element {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<Stack
@@ -20,7 +28,7 @@ export function Home() {
 			alignItems="center"
 			justifyContent="center"
 			flexWrap="wrap"
-			className="join-page"
+			className={styles.joinPage}
 			padding="20px"
 		>
 			<Grid
@@ -32,9 +40,15 @@ export function Home() {
 				]}
 				gap={6}
 			>
-				<Box p={3}>
-					<Image w={["100%", "80%", "74%", "70%"]} mx="auto" src={bg} />
-				</Box>
+				<LazyLoad>
+					<Box p={3}>
+						<Image
+							w={["100%", "80%", "74%", "80%"]}
+							mx="auto"
+							src={homeAvatar}
+						/>
+					</Box>
+				</LazyLoad>
 				<Stack align="center" justify="center" spacing="2em" p={3}>
 					<Heading
 						style={{
@@ -51,7 +65,7 @@ export function Home() {
 					<Text
 						w="80%"
 						fontSize={["20px", "20px", "25px", "24px"]}
-						className="quote"
+						className={styles.quote}
 					>
 						<strong>Sociify</strong> is an online platform which helps its users
 						to get closer and remain updated on their likeable topics thorugh
