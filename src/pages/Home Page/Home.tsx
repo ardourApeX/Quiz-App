@@ -1,6 +1,6 @@
 import "./Home.css";
 import {
-	Flex,
+	Text,
 	Stack,
 	useColorMode,
 	Box,
@@ -14,42 +14,61 @@ import { bgColor, textColor } from "../../utils/constants";
 export function Home() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
-		<div className="join-page">
-			<div className="join-content">
-				<Grid
-					templateColumns={[
-						"repeat(1,1fr)",
-						"repeat(1,1fr)",
-						"repeat(2,fr)",
-						"repeat(2, 1fr)",
-					]}
-					gap={6}
-				>
-					<Box p={3}>
-						<Image w={["100%", "100%", "74%", "100%"]} mx="auto" src={bg} />
-					</Box>
-					<Stack align="center" justify="center" spacing="2em" p={3}>
-						<Heading
-							style={{ fontFamily: "Quicksand, sans-serif" }}
-							className="banner-heading"
-							as="h1"
-							fontSize="3vw"
+		<Stack
+			display="flex"
+			h="100%"
+			alignItems="center"
+			justifyContent="center"
+			flexWrap="wrap"
+			className="join-page"
+			padding="20px"
+		>
+			<Grid
+				templateColumns={[
+					"repeat(1,1fr)",
+					"repeat(1,1fr)",
+					"repeat(2,fr)",
+					"repeat(2, 1fr)",
+				]}
+				gap={6}
+			>
+				<Box p={3}>
+					<Image w={["100%", "80%", "74%", "70%"]} mx="auto" src={bg} />
+				</Box>
+				<Stack align="center" justify="center" spacing="2em" p={3}>
+					<Heading
+						style={{
+							textAlign: "center",
+							fontFamily: "Quicksand, sans-serif",
+						}}
+						className="banner-heading"
+						w="100%"
+						as="h1"
+						fontSize={["20px", "3vw", "3vw"]}
+					>
+						An Online Community for Musketeeeeers.
+					</Heading>
+					<Text
+						w="80%"
+						fontSize={["20px", "20px", "25px", "24px"]}
+						className="quote"
+					>
+						<strong>Sociify</strong> is an online platform which helps its users
+						to get closer and remain updated on their likeable topics thorugh
+						quizzes.
+					</Text>
+					<Box display="flex" justifyContent="center" w="100%">
+						<Button
+							w={["95px", "100px ", "110px", "120px"]}
+							colorScheme="teal"
+							fontSize={["sm", "md", "md", "md"]}
+							variant="solid"
 						>
-							An Online Community for Musketeeeeers.
-						</Heading>
-						<p className="quote">
-							<strong>Sociify</strong> is an online platform which helps its
-							users to get closer and remain updated on their likeable topics
-							thorugh quizzes.
-						</p>
-						<Box w="100%">
-							<Button w="150px" colorScheme="teal" variant="solid">
-								Take a Quiz
-							</Button>
-						</Box>
-					</Stack>
-				</Grid>
-			</div>
-		</div>
+							Take a Quiz
+						</Button>
+					</Box>
+				</Stack>
+			</Grid>
+		</Stack>
 	);
 }

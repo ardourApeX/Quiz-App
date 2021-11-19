@@ -1,2 +1,2 @@
-export {  Home } from "./Home Page/Home";
-export { Join } from "./Join Page/Join";
+export { Home } from "./Home Page/Home";
+export { Profile } from "./Profile Page/Profile";

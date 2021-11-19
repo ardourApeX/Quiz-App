@@ -29,6 +29,7 @@
 	--light-gray: rgb(74, 85, 105);
 	--dark-gray: rgb(7, 7, 7);
 	--offwhite: rgb(203, 213, 223);
+	
 }
 ::after,
 ::before,
@@ -36,4 +37,20 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+.Parent-App {
+	background-image: linear-gradient(
+			217deg,
+			rgba(232, 239, 253, 255),
+			rgba(218, 227, 242, 255) 70.71%
+		),
+		linear-gradient(
+			127deg,
+			rgba(235, 238, 253, 255),
+			rgba(227, 222, 255, 255) 70.71%
+		);
+	padding: 1.5rem;
+}
+.App {
+
 }
